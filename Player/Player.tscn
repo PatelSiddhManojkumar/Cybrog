@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8bys7my568to"]
+[gd_scene load_steps=16 format=3 uid="uid://8bys7my568to"]
 
 [ext_resource type="Texture2D" uid="uid://bi1ymmi4esnly" path="res://Orange_robo_hurt_1.png" id="1_p8cs4"]
 [ext_resource type="Texture2D" uid="uid://cd0psy4vc5r0e" path="res://Orange_robo_hurt_2.png" id="2_rswb5"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bdorlgclruqfp" path="res://Orange_robo_Run_2.png" id="6_aeg1d"]
 [ext_resource type="Texture2D" uid="uid://47e6gb3bujio" path="res://Orange_robo_Run_3.png" id="7_y1kbh"]
 [ext_resource type="Texture2D" uid="uid://ca81tbi31wnna" path="res://Orange_robo_Run_4.png" id="8_y47vo"]
+[ext_resource type="Texture2D" uid="uid://dcaq3rrmeqjwp" path="res://Orange_robo_RunBack_1.png" id="9_bkpnf"]
+[ext_resource type="Texture2D" uid="uid://2fgwthnt0kos" path="res://Orange_robo_RunBack_2.png" id="10_3yekx"]
+[ext_resource type="Texture2D" uid="uid://50dgq0vwga55" path="res://Orange_robo_RunBack_3.png" id="11_7o1s3"]
+[ext_resource type="Texture2D" uid="uid://4plorxufffdu" path="res://Orange_robo_RunBack_4.png" id="12_7b13e"]
 
 [sub_resource type="GDScript" id="GDScript_oaqrk"]
 resource_name = "res://Player/Player.gd"
@@ -42,6 +46,7 @@ func _physics_process(delta):
 	else:
 		anim.play(\"Idle\")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
 
 	move_and_slide()
 "
@@ -90,6 +95,23 @@ animations = [{
 "loop": true,
 "name": &"Run",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bkpnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3yekx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7o1s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7b13e")
+}],
+"loop": true,
+"name": &"run back",
+"speed": 5.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -103,4 +125,4 @@ shape = SubResource("CapsuleShape2D_avj8j")
 position = Vector2(-1.00001, -17)
 scale = Vector2(1.09134, 1.33759)
 sprite_frames = SubResource("SpriteFrames_rcav0")
-animation = &"Idle"
+animation = &"run back"
