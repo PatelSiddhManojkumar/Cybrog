@@ -11,7 +11,7 @@ size = Vector2(344.25, 609.375)
 [node name="World" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_wn01s")]
-position = Vector2(110, 60)
+position = Vector2(91, 42)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -28,7 +28,7 @@ position = Vector2(-135, 240)
 shape = SubResource("RectangleShape2D_hnjyv")
 
 [node name="PanelContainer" type="PanelContainer" parent="StaticBody2D/CollisionShape2D3"]
-offset_left = -88.0
-offset_top = 244.0
-offset_right = 1695.0
-offset_bottom = 625.0
+offset_left = -94.0
+offset_top = 226.0
+offset_right = 1689.0
+offset_bottom = 607.0
