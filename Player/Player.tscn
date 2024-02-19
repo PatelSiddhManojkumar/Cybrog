@@ -42,7 +42,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis(\"ui_left\", \"ui_right\")
 	if direction:
 		velocity.x = direction * SPEED
-		anim.play(\"run\")
+		anim.play(\"Run\")
 	else:
 		anim.play(\"Idle\")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -80,16 +80,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 0.9,
+"duration": 1.0,
 "texture": ExtResource("5_5kfbo")
 }, {
-"duration": 0.9,
+"duration": 1.0,
 "texture": ExtResource("6_aeg1d")
 }, {
-"duration": 0.9,
+"duration": 1.0,
 "texture": ExtResource("7_y1kbh")
 }, {
-"duration": 0.9,
+"duration": 1.0,
 "texture": ExtResource("8_y47vo")
 }],
 "loop": true,
@@ -125,4 +125,4 @@ shape = SubResource("CapsuleShape2D_avj8j")
 position = Vector2(-1.00001, -17)
 scale = Vector2(1.09134, 1.33759)
 sprite_frames = SubResource("SpriteFrames_rcav0")
-animation = &"Run"
+animation = &"run back"
