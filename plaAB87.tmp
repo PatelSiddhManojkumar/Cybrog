@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://btoutgp5mu3sq"]
+
+[ext_resource type="Texture2D" uid="uid://6rv7vmbo8qf4" path="res://Orange_robo_hurt_1.png" id="1_5lbro"]
+[ext_resource type="Script" path="res://player.gd" id="1_x5tr7"]
+[ext_resource type="Texture2D" uid="uid://bcahlgt1douoe" path="res://Orange_robo_hurt_2.png" id="2_x3ku7"]
+[ext_resource type="Texture2D" uid="uid://231r6j3dlmdq" path="res://Orange_robo_hurt_3.png" id="3_4hnfq"]
+[ext_resource type="Texture2D" uid="uid://dw0i0vx401a21" path="res://Orange_robo_idle.png" id="4_v5wco"]
+[ext_resource type="Texture2D" uid="uid://b78j3428putii" path="res://Orange_robo_Run_1.png" id="5_lky6t"]
+[ext_resource type="Texture2D" uid="uid://52j4euwyf4ra" path="res://Orange_robo_Run_2.png" id="6_fynt6"]
+[ext_resource type="Texture2D" uid="uid://7gfyfok02l22" path="res://Orange_robo_Run_3.png" id="7_mprcm"]
+[ext_resource type="Texture2D" uid="uid://c17wn72u6rqjo" path="res://Orange_robo_Run_4.png" id="8_bt06b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anlre"]
+size = Vector2(131.052, 273.142)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1ix5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5lbro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x3ku7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4hnfq")
+}],
+"loop": true,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v5wco")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lky6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fynt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mprcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bt06b")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.793576, 0.311193)
+script = ExtResource("1_x5tr7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(275.966, 332.591)
+shape = SubResource("RectangleShape2D_anlre")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(301, 274)
+scale = Vector2(1.82979, 3.02818)
+sprite_frames = SubResource("SpriteFrames_g1ix5")
+animation = &"Run"
+flip_h = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(-5.54318, 0.418258)
+offset = Vector2(400, 0)
+zoom = Vector2(0.5, 0.5)

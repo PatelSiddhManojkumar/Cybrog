@@ -1,34 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://jxgsgg4l57bk"]
+[gd_scene load_steps=4 format=3 uid="uid://ca2p76hh2uexr"]
 
-[ext_resource type="PackedScene" uid="uid://8bys7my568to" path="res://Player/Player.tscn" id="1_wn01s"]
+[ext_resource type="PackedScene" uid="uid://btoutgp5mu3sq" path="res://player.tscn" id="1_xqx4i"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ybee"]
-size = Vector2(1646, 383.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_846lb"]
+size = Vector2(1147.5, 190.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnjyv"]
-size = Vector2(344.25, 609.375)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63wwp"]
+size = Vector2(220, 523.375)
 
 [node name="World" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_wn01s")]
-position = Vector2(91, 42)
+[node name="Player" parent="." instance=ExtResource("1_xqx4i")]
+position = Vector2(148, 121)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(678, 658.25)
-shape = SubResource("RectangleShape2D_5ybee")
+position = Vector2(576.25, 555.375)
+shape = SubResource("RectangleShape2D_846lb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1400.88, 248.688)
-shape = SubResource("RectangleShape2D_hnjyv")
+position = Vector2(-117, 265)
+shape = SubResource("RectangleShape2D_63wwp")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-135, 240)
-shape = SubResource("RectangleShape2D_hnjyv")
+position = Vector2(1269, 260)
+shape = SubResource("RectangleShape2D_63wwp")
 
-[node name="PanelContainer" type="PanelContainer" parent="StaticBody2D/CollisionShape2D3"]
-offset_left = -94.0
-offset_top = 226.0
-offset_right = 1689.0
-offset_bottom = 607.0
+[node name="Panel" type="Panel" parent="."]
+offset_left = -92.0
+offset_top = 464.0
+offset_right = 1155.0
+offset_bottom = 539.0
+scale = Vector2(1, 1.04)
