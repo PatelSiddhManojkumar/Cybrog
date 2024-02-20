@@ -1,15 +1,28 @@
+<<<<<<< HEAD
 [gd_scene load_steps=31 format=3 uid="uid://btoutgp5mu3sq"]
+=======
+[gd_scene load_steps=18 format=3 uid="uid://btoutgp5mu3sq"]
+>>>>>>> parent of f756b77 (kuch pata nahi chal raha)
 
 [ext_resource type="Texture2D" uid="uid://6rv7vmbo8qf4" path="res://Orange_robo_hurt_1.png" id="1_5lbro"]
 [ext_resource type="Script" path="res://player.gd" id="1_x5tr7"]
 [ext_resource type="Texture2D" uid="uid://bcahlgt1douoe" path="res://Orange_robo_hurt_2.png" id="2_x3ku7"]
 [ext_resource type="Texture2D" uid="uid://231r6j3dlmdq" path="res://Orange_robo_hurt_3.png" id="3_4hnfq"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bcrjtn7noxqgk" path="res://indianidol-removebg-preview.png" id="5_lgurc"]
 [ext_resource type="Texture2D" uid="uid://bfp0tgj1ygvp2" path="res://rr-removebg-preview.png" id="6_4i6f1"]
+=======
+[ext_resource type="Texture2D" uid="uid://dw0i0vx401a21" path="res://Orange_robo_idle.png" id="4_v5wco"]
+[ext_resource type="Texture2D" uid="uid://b78j3428putii" path="res://Orange_robo_Run_1.png" id="5_lky6t"]
+[ext_resource type="Texture2D" uid="uid://52j4euwyf4ra" path="res://Orange_robo_Run_2.png" id="6_fynt6"]
+[ext_resource type="Texture2D" uid="uid://7gfyfok02l22" path="res://Orange_robo_Run_3.png" id="7_mprcm"]
+[ext_resource type="Texture2D" uid="uid://c17wn72u6rqjo" path="res://Orange_robo_Run_4.png" id="8_bt06b"]
+>>>>>>> parent of f756b77 (kuch pata nahi chal raha)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anlre"]
 size = Vector2(131.052, 273.142)
 
+<<<<<<< HEAD
 [sub_resource type="AtlasTexture" id="AtlasTexture_nx5hg"]
 atlas = ExtResource("5_lgurc")
 region = Rect2(0, 0, 64, 75)
@@ -74,6 +87,8 @@ region = Rect2(512, 0, 64, 95)
 atlas = ExtResource("6_4i6f1")
 region = Rect2(576, 0, 64, 95)
 
+=======
+>>>>>>> parent of f756b77 (kuch pata nahi chal raha)
 [sub_resource type="SpriteFrames" id="SpriteFrames_g1ix5"]
 animations = [{
 "frames": [{
@@ -115,34 +130,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bnrt0")
+"texture": ExtResource("5_lky6t")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_80al0")
+"texture": ExtResource("6_fynt6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0jso8")
+"texture": ExtResource("7_mprcm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d68fu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n5ygq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_84ukr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u4j13")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ry0xk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jrvqg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_un7k4")
+"texture": ExtResource("8_bt06b")
 }],
 "loop": true,
 "name": &"Run",
@@ -163,7 +160,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [&"Idle"]
 }
 tracks/1/type = "value"
@@ -175,7 +172,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
+"update": 1,
 "values": [0, 0, 0, 0]
 }
 
@@ -193,7 +190,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [0]
 }
 tracks/1/type = "value"
@@ -231,10 +228,17 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+<<<<<<< HEAD
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 3, 4, 7, 8, 9]
+=======
+"times": PackedFloat32Array(0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 3]
+>>>>>>> parent of f756b77 (kuch pata nahi chal raha)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gcf72"]
