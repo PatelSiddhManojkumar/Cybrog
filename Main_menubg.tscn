@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0piftobxjmg3"]
+
+[ext_resource type="Script" path="res://BG.gd" id="1_xhkot"]
+[ext_resource type="Texture2D" uid="uid://dqmitseio28u" path="res://cyberpunk-street.png" id="2_2umqn"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_xhkot")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+
+[node name="Cyberpunk-street" type="Sprite2D" parent="."]
+position = Vector2(579.25, 329)
+scale = Vector2(1.89391, 3.41667)
+texture = ExtResource("2_2umqn")
